@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-
+import sys
 # Python program to solve N Queen  
 # Problem using backtracking 
   
 global N 
 N = 4
-a = 0
-b = 0
-c = 0
-d = 0
   
 def printSolution(board): 
     for i in range(N): 
@@ -78,11 +74,15 @@ def solveNQUtil(board, col):
 # solutions, this function prints one  of the 
 # feasible solutions. 
 def solveNQ(number): 
-    if number == 1:
+    a = 0
+    b = 0
+    c = 0 
+    d = 0
+    if number == "1":
       a = 1
-    elif number == 2:
+    elif number == "2":
       b = 1
-    elif number == 3:
+    elif number == "3":
       c = 1
     else:
       d = 1
@@ -101,6 +101,6 @@ def solveNQ(number):
     return True
   
 # driver program to test above function 
-solveNQ(1) 
+solveNQ(sys.argv[1]) 
   
 # This code is contributed by Divyanshu Mehta 
